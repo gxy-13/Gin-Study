@@ -1,2 +1,2 @@
-# Gin-Study-ToDoList
-gin study demo
+# Gin-Study
+gin study 
