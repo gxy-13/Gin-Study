@@ -1,0 +1,68 @@
+insert into 表名（`字段名`，`字段名`....） values(11,11)
+delete from 表名 where xx =  xx
+update  表名 set xx = xx  where  xx =  xx
+select * from  表名 where xx= xx
+select distinct  字段 from 表名
+
+select id name 
+from a A 
+join b b
+on a. id = b.id
+
+select id 
+from a a 
+left join b b
+on a.id  = b.id 
+
+select name 
+from a a 
+right join b b
+on a.id = b.id
+
+select name
+from a a 
+right join b b
+on a.id = b.id
+where a.id is null
+
+select name 
+from a a 
+left join  b b
+on a.id = b.id
+where b.id is null
+
+
+select name 
+from a  a
+left join b b
+on a.id = b.id
+where b.id is null
+union all
+select name
+from a a
+right join b b
+on a.id  = b.id
+
+
+select name 
+fron a a 
+left  join  b b
+on a.id = b.id
+where b.id is null
+union all
+select name
+from a a 
+right join b b
+on a.id = b.id
+where a.id is null
+
+select  studentno r.subjectno  studentResult
+from result r
+inner join subject s
+on r.subjectno = s.subjectno
+where s.subjectName = '数据库结构-1'
+order by studentResult desc
+
+select s.studentno , s.studentname
+from student s
+where s.studentno in (select studentno from result where studentresult >= 80  )
